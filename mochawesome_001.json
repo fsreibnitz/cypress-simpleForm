@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-30T03:38:17.735Z",
+    "end": "2021-10-30T03:38:19.240Z",
+    "duration": 1505,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "38ef32d7-b68d-4f5f-8951-d824c5cb2f5b",
+      "title": "",
+      "fullFile": "cypress/integration/listagem.spec.js",
+      "file": "cypress/integration/listagem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c7bafc6-6fe6-4312-867c-23486d923380",
+          "title": "Listagem",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando não houver cadastros, a Listagem deve estar vazia",
+              "fullTitle": "Listagem Quando não houver cadastros, a Listagem deve estar vazia",
+              "timedOut": null,
+              "duration": 285,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('listagem-vazia').then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n});\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length', 0);",
+              "err": {},
+              "uuid": "7b0b8326-f3c2-459c-a4ef-89f3e19c649d",
+              "parentUUID": "5c7bafc6-6fe6-4312-867c-23486d923380",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando houver um ou mais cadastros, a Listagem deve estar preenchida",
+              "fullTitle": "Listagem Quando houver um ou mais cadastros, a Listagem deve estar preenchida",
+              "timedOut": null,
+              "duration": 153,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('listagem-com-itens').then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n});\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length', 1);",
+              "err": {},
+              "uuid": "3aceae24-d0db-470a-9467-fa6dbb305c4e",
+              "parentUUID": "5c7bafc6-6fe6-4312-867c-23486d923380",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b0b8326-f3c2-459c-a4ef-89f3e19c649d",
+            "3aceae24-d0db-470a-9467-fa6dbb305c4e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 438,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
