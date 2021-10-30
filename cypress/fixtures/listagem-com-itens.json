@@ -1,0 +1,14 @@
+[
+  {
+    "firstName": "Fabio",
+    "lastName": "Reibnitz",
+    "adress": "Vila FormosaVila Formosa",
+    "emailAdress": "teste@teste.com",
+    "radioGender": "m",
+    "checks": ["Netflix", "Livros"],
+    "selectCountries": "Hong Kong",
+    "selectYears": "2020",
+    "selectMonths": "Janeiro",
+    "pwd": "Teste123"
+  }
+]
