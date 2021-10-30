@@ -23,7 +23,7 @@ jobs:
       continue-on-error: true
       
     - run: npm run report:merge
-    - run: npm run report:clean
+    - run: npm run report:mocha
 
 # Github Pages
     - name: Deploy to GitHub Pages
